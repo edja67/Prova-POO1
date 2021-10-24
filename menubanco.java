@@ -9,7 +9,7 @@ public class menubanco {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		ArrayList<contab> Contas = new ArrayList<contab>();
-		int opt = 0, controle;
+		int opt = 0, TipoConta;
 		
 		String nomeagencia, nomeCliente, cpfcliente;
 		int numeroagencia;
@@ -45,9 +45,9 @@ public class menubanco {
 					
 		System.out.println("1. Poupança");
 		System.out.println("2. Outra");
-		controle = sc.nextInt(); 
+		TipoConta = sc.nextInt(); 
 		
-		if(controle == 1) 
+		if(TipoConta == 1) 
 		{
 			Contas.add(new poupanca(numConta, new banco(numeroagencia, nomeagencia), new clienteb(nomeCliente, cpfcliente), 0.0));
 		}else
@@ -132,4 +132,3 @@ public class menubanco {
 		
 
 		
-	}
